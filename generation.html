@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Hunt</title>
+    <script defer src="header-script.js"></script>
+    <script defer src="generation-script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+<body>
+    <header id="header">
+
+    </header>
+
+    <main>
+
+    <form action="" id="genInputForm">
+        <fieldset class="generationFieldset">
+            <legend>Select a generation</legend>
+            <label for="gen1"><input type="radio" value="gen1" id="gen1" name="genInput" checked>
+            Generation 1</label>
+            <label for="gen2"><input type="radio" value="gen2" id="gen2" name="genInput">
+            Generation 2</label>
+            <label for="gen3"><input type="radio" value="gen3" id="gen3" name="genInput">
+            Generation 3</label>
+            <label for="gen4"><input type="radio" value="gen4" id="gen4" name="genInput">
+            Generation 4</label>
+            <label for="gen5"><input type="radio" value="gen5" id="gen5" name="genInput">
+            Generation 5</label>
+            <label for="gen6"><input type="radio" value="gen6" id="gen6" name="genInput">
+            Generation 6</label>
+            <label for="gen7"><input type="radio" value="gen7" id="gen7" name="genInput">
+            Generation 7</label>
+            <label for="gen8"><input type="radio" value="gen8" id="gen8" name="genInput">
+            Generation 8</label>
+            <label for="gen9"><input type="radio" value="gen9" id="gen9" name="genInput">
+            Generation 9</label>
+        </fieldset>
+        <fieldset class="showAllFieldset">
+            <legend>Show all Pokemon?</legend>
+            <label for="allPkm"><input type="radio" value="allPkm" id="allPkm" name="caughtInput" checked>
+            Display all Pokemon</label>
+            <label for="caughtPkm"><input type="radio" value="caughtPkm" id="caughtPkm" name="caughtInput">
+            Only display caught Pokemon</label>
+            <label for="uncaughtPkm"><input type="radio" value="uncaughtPkm" id="uncaughtPkm" name="caughtInput">
+            Only display uncaught Pokemon</label>
+        </fieldset> 
+            <div class="searchdiv"><button id="searchbutton"><i class="bi bi-search"></i> SEARCH</button></div>
+    </form>
+
+
+
+    <h2 class="generationTitle">Generation x</h2>
+
+    <section class="poke-list">
+        <ul id="pokemon-list">
+        </ul>
+    </section>
+</main>
+</body>
+</html>
