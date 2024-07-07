@@ -32,8 +32,10 @@ fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
                     <br>
                     <b>#${pokeId}</b><br>
                     <b>${myShinyPokemon.name.en}</b> <i>FR: ${myShinyPokemon.name.fr}</i><br>
+                    <div>
                         <img src="${myShinyPokemon.types[0].image}" alt="type" class="pkmn-type">
                         ${myShinyPokemon.types[1] ? `<img src="${myShinyPokemon.types[1].image}" alt="type" class="pkmn-type"><br>` : ''}
+                    </div>
                     <div class="pkm-collection">
                         <button class="addPokemon" id="addPokemon${pokeId}"><i class="bi bi-plus-circle"></i></button>
                         <span class="countPokemon" id="countPokemon${pokeId}">x${currentCount}</span>
@@ -41,23 +43,22 @@ fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
                     </div>
                     <button class="accesspage">See more</button>
                 `;
-                // roundedElement.appendChild(randomPkm);
 
                 // Add event listener for Add Pokemon button
-                const addPokemonButton = listItem.querySelector(`#addPokemon${pokeId}`);
+                const addPokemonButton = roundedElement.querySelector(`#addPokemon${pokeId}`);
                 addPokemonButton.addEventListener('click', () => {
                     currentCount++;
                     localStorage.setItem(pokeId, currentCount);
-                    listItem.querySelector(`#countPokemon${pokeId}`).innerText = `x${currentCount}`;
+                    roundedElement.querySelector(`#countPokemon${pokeId}`).innerText = `x${currentCount}`;
                 });
 
                 // Add event listener for Delete Pokemon button
-                const deletePokemonButton = listItem.querySelector(`#deletePokemon${pokeId}`);
+                const deletePokemonButton = roundedElement.querySelector(`#deletePokemon${pokeId}`);
                 deletePokemonButton.addEventListener('click', () => {
                     if (currentCount > 0) {
                         currentCount--;
                         localStorage.setItem(pokeId, currentCount);
-                        listItem.querySelector(`#countPokemon${pokeId}`).innerText = `x${currentCount}`;
+                        roundedElement.querySelector(`#countPokemon${pokeId}`).innerText = `x${currentCount}`;
                     }
                 });
             })

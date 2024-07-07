@@ -68,7 +68,7 @@ function changeGen(genNumber, catchFilter) {
 
                     currentCount++;
 
-                    localStorage.setItem(selectedId, currentCount, lastCaughtDate);
+                    localStorage.setItem(selectedId, currentCount);
                     countSpan.innerText = `x${currentCount}`;
 
                     const catchIndicator = countSpan.closest('li').querySelector('.catchIndicator');
