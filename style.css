@@ -323,6 +323,15 @@ legend {
     padding: 10px !important;
 }
 
+.gameDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px !important;
+    gap: 10px;
+    border: 2px dotted black !important;
+    background-color: #ffeb6991;
+}
+
 .searchdiv {
     display: flex;
     justify-content: center;
