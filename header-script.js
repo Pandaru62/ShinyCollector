@@ -17,13 +17,13 @@ navItem.innerHTML =
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/generation.html">Search by generation</a>
+            <a class="nav-link active" aria-current="page" href="/generationsearch">Search by generation</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/generation.html">Search by games</a>
+            <a class="nav-link active" aria-current="page" href="/gamessearch">Search by games</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/generation.html">My shiny collection</a>
+            <a class="nav-link active" aria-current="page" href="/mycollection">My shiny collection</a>
         </li>
       </ul>
     </div>

@@ -22,6 +22,11 @@ app.get('/gamessearch', (req, res) => {
     res.sendFile(path.join(__dirname, 'games.html'));
 });
 
+app.get('/mycollection', (req, res) => {
+    res.sendFile(path.join(__dirname, 'mycollection.html'));
+});
+
+
 app.get('/pokedex', (req, res) => {
     res.sendFile(path.join(__dirname, 'dex.html'));
 });

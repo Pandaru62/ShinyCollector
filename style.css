@@ -78,9 +78,20 @@ div h2, div h1 {
     margin-bottom: 10px;
 }
 
+.accesspage2 {
+    background-color: white !important;
+}
+
+
+
 .accesspage:hover {
     background-color: white !important;
     color: white;
+}
+
+.accesspage2:hover {
+    color: white !important;
+    background-color: black !important;
 }
 
 

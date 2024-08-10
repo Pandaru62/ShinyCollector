@@ -38,7 +38,7 @@ fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
                         <span class="countPokemon" id="countPokemon${pokeId}">x${currentCount}</span>
                         <button class="deletePokemon" id="deletePokemon${pokeId}"><i class="bi bi-dash-circle"></i></button>
                     </div>
-                    <a href="/pokedex?num=${pokeId}" class="accesspage">See more</a>
+                    <a href="/pokedex?num=${pokeId}" class="accesspage accesspage2">See more</a>
                 `;
 
                 // Add event listener for Add Pokemon button
