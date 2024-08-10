@@ -6,8 +6,6 @@ function getRandomInt(min, max) {
   
 let pokemonNumber = getRandomInt(1, 1025);
 
-const genInputForm = document.getElementById("genInputForm");
-
 fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
     .then(response => {
         if (!response.ok) {
@@ -18,10 +16,9 @@ fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
     .then(myShinyPokemon => {
 
         const roundedElement = document.querySelector(".rounded-background")
-        // const randomPkm = document.createElement('div');
+
         const pokeId = pokemonNumber;
         let currentCount = parseInt(localStorage.getItem(pokeId)) || 0;
-        console.log(myShinyPokemon.types)
 
             roundedElement.innerHTML = `
                     <div class="sprite-bg">
@@ -29,7 +26,7 @@ fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
                         <div class="middle-sep-pkball"></div>
                         <img class="pkmn-sprite" src="${myShinyPokemon.sprites.shiny || myShinyPokemon.sprites.regular}" alt="${myShinyPokemon.name.fr}">
                     </div>
-                    <br>
+                    <hr>
                     <b>#${pokeId}</b><br>
                     <b>${myShinyPokemon.name.en}</b> <i>FR: ${myShinyPokemon.name.fr}</i><br>
                     <div>
@@ -41,7 +38,7 @@ fetch('https://tyradex.tech/api/v1/pokemon/'+ pokemonNumber)
                         <span class="countPokemon" id="countPokemon${pokeId}">x${currentCount}</span>
                         <button class="deletePokemon" id="deletePokemon${pokeId}"><i class="bi bi-dash-circle"></i></button>
                     </div>
-                    <button class="accesspage">See more</button>
+                    <a href="/pokedex?num=${pokeId}" class="accesspage">See more</a>
                 `;
 
                 // Add event listener for Add Pokemon button

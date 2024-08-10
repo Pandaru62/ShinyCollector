@@ -1,88 +1,65 @@
-body {
-    margin: 0;
-}
-
-footer, header {
-    background-color: black;
-    font-family: 'Courier New', Courier, monospace;
-}
+/* HEADER */
 
 header {
-    margin: 0 0 10px 0;
-    padding: 0 5px;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
 }
 
-header a {
-    text-decoration: none;
-    color: inherit;
+.nav-item, footer ul li a {
+    color: rgb(255, 249, 141);
+    font-weight: 600;
+    text-decoration: underline;
+} 
+
+.nav-item a, footer ul li a {
+    color: rgb(255, 249, 141) !important;
 }
+
+.nav-item a:hover, footer ul li a:hover {
+    text-decoration: none;
+    color: black !important;
+    background-color: white !important;
+}
+
+.logo {
+    color: rgb(255, 249, 141);
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+
+/* FOOTER */
+
 
 #footer {
+    background-color: black;
+    color: white;
     padding: 2px 10px;
     justify-content: center;
-
+    align-items: center;
 }
 
-.footer-endpage {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
-footer li {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
+
+@media (min-width: 992px) {
+
+    .footer-endpage {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
 }
 
 footer ul {
     padding: 0;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     list-style: none;
 }
 
-
-header h1, footer {
-    color: white;
-}
-
-nav {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
-
-nav .logo {
-    color: rgb(255, 249, 141);
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    column-gap: 10px;
-    text-align: center;
-
-}
-
-nav li, footer li a {
-    color: black;
-    text-decoration: none;
-    background-color: white;
-    padding: 1px 5px;
-    border-radius: 10px;
-    font-weight: 800;
-}
-
-nav li:hover, footer a:hover {
-    background-color: rgb(255, 249, 141);
-    font-size: 1.1em;
+footer ul li {
+    padding: 2px
 }
 
 .footername {
